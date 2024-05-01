@@ -84,6 +84,9 @@ class OrganizationMembershipStream(ClerkStream):
         th.Property("updated_at", th.IntegerType, description="Timestamp of when the membership was last updated")
     ).to_dict()
 
+    def parse_response(self, response: requests.Response) -> t.Iterable[dict]:
+        yield from extract_jsonpath("$.data[*]", input=response.json())
+
 class UsersStream(ClerkStream):
     """Users stream class."""
     name = "users"
