@@ -21,7 +21,7 @@ class TapClerk(Tap):
     def discover_streams(self) -> list[streams.ClerkStream]:
         return [
             streams.OrganizationsStream(self),
-            streams.OrganizationMembershipStream(self),
+            streams.OrganizationMembershipsStream(self),
             streams.UsersStream(self),
         ]
 

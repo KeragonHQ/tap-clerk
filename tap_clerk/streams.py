@@ -42,9 +42,9 @@ class OrganizationsStream(ClerkStream):
     def get_child_context(self, record: dict, context: t.Optional[dict]) -> dict:
         return { "organization_id": record["id"] }
 
-class OrganizationMembershipStream(ClerkStream):
+class OrganizationMembershipsStream(ClerkStream):
     """OrganizationMembership stream class."""
-    name = "organization_membership"
+    name = "organization_memberships"
     parent_stream_type = OrganizationsStream
     ignore_parent_replication_keys = True
     path = "/organizations/{organization_id}/memberships"
