@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "tap-clerk"
-version = "0.0.1"
+version = "0.0.2"
 description = "`tap-clerk` is a Singer tap for Clerk, built with the Meltano Singer SDK."
 readme = "README.md"
 authors = ["Panos Papageorgiou <panos.papageorgiou@keragon.com>"]
